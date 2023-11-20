@@ -1,4 +1,5 @@
 ---
-title: Welcome to my blog
+title: Erin's Musings
 ---
 
+# Lorem Ipsum
