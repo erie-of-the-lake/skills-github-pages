@@ -1,0 +1,36 @@
+---
+title: "The NVMe Expressway to Hell"
+date: 2023-11-30
+---
+
+# Preface
+
+I know I won't get around to trying to fix my SSD for a while, especially since, right now, I have a mountain of priorities more pressing than this. That said, when I do finally return to troubleshooting and fixing my SSD, I'll at least know what ground I've covered and where to continue.
+
+In addition, this blog post is going to be more casual than others. I'm going to go onto some tangents in [Murphy's Law](# Murphy's Law), both as a means to recount events and also to stretch my writing muscles.
+
+
+# Murphy's Law 
+
+Not to be too trite or platitudinous, but as they say, "anything that can go wrong *will* go wrong." And hoo boy did everything indeed go wrong. After figuring out how my SSD is probably messed up, the following series of unfortunate events took center stage:
+
+1. When screwing my laptop's outer shell back on, the screw I was working with came loose and lodged itself under God knows where. I had assumed the motherboard or some daughterboard.
+2. When removing screws to the motherboard, another screw lost its magnetic attraction to my screwdriver and lodged itself under the motherboard. Thankfully some percussive persuasion dislodged that one.
+3. In order to remove the motherboard, I of course had to remove the heat sink first. After some fiddling, detaching the silicon from its thermal paste, I found out I missed a screw hidden behind some tape. No matter. But after biting deep, bit after screwdriver bit, I ended up stripping the screw.
+4. Two days and a priority shipped screw extraction plier later, I finally removed that accursed screw after over an hour of finagling.
+5. Removing the motherboard, finding the last screw, and then putting everything back together, I finally... Oh, it looks like I accidentally detached one of the wires connected to the right fan, and it no longer works. After all my laptop disassemblies since 2019, that was the first time that happened. 
+6. One new fan later, I finally had my laptop back to working order.
+
+
+# Diagnosing the Death of my NVMe
+
+Perhaps the most obvious death of an SSD is when it exceeds it's TBW limit. But for most of its life, my SSD has either sat collecting dust in my old desktop or used as a backup. Rather, one day, it was working fine, and upon my next bootup, my OS no longer seemed to identify it.
+
+Oleg Afonin, in his [excellent guide over the death of SSDs](https://blog.elcomsoft.com/2019/01/why-ssds-die-a-sudden-death-and-how-to-deal-with-it/), notes that
+> [i]f the SSD drive does not appear in the computer's BIOS, it may mean its controller is in a bootloop.
+Likewise, one might b
+
+Having checked the BIOS, it doesn't appear at all. 
+TODO: Recheck if `lsblk` makes it show up.
+
+
